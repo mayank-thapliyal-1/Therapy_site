@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import img from "../src/faq.jpg";
 import { motion } from "framer-motion";
+import { slideInView } from "../Animation/animation";
 const Faq = () => {
   const [val, setVal] = useState(-1);
   console.log(val);
@@ -23,16 +24,10 @@ const Faq = () => {
     },
   ];
   return (
-    <div className="flex sm:flex-row flex-col gap-5 sm:gap-0 sm:p-2 p-5 justify-around sm:items-center w-screen sm:h-screen overflow-hidden h-full">
+    <div className="flex sm:flex-row flex-col gap-5 sm:gap-0 sm:p-2  justify-around sm:items-center w-screen sm:h-screen  h-full">
       <motion.div
-        whileInView={{
-          y: [100, 0],
-          opacity: [0, 1],
-        }}
-        transition={{
-          duration: 0.5,
-        }}
-        className="w-screen s:w-full flex-1 flex items-center justify-center"
+        {...slideInView()}
+        className="w-screen s:w-full flex-1 flex items-center pt-5 justify-center"
       >
         <Image
           className="sm:h-160 sm:w-120 w h-80 w-50 rounded-t-full"
@@ -40,40 +35,19 @@ const Faq = () => {
           alt=""
         />
       </motion.div>
-      <div className="flex flex-col sm:gap-10 gap-6 sm:w-1/2 sm:p-10 w-full">
-        <motion.h1
-          whileInView={{
-            y: [20, 0],
-            opacity: [0, 1],
-          }}
-          transition={{
-            duration: 0.5,
-          }}
-          className="sm:text-5xl text-4xl "
-        >
+      <div className="flex flex-col sm:gap-10 gap-6 sm:w-1/2 sm:p-10 p-5 w-full">
+        <motion.h1 {...slideInView()} className="sm:text-5xl text-3xl ">
           FAQs
         </motion.h1>
         <div className="flex flex-col  ">
           {obj.map((data, index) => (
             <motion.div
-              whileInView={{
-                y: [50, 0],
-                opacity: [0, 1],
-              }}
-              transition={{
-                duration: 0.5,
-              }}
-              className={`${index == 2 ? "border-y" : "border-t"} sm:py-5 py-3`}
               key={index}
+              {...slideInView()}
+              className={`${index == 2 ? "border-y" : "border-t"} sm:py-5 py-3`}
             >
               <motion.div
-                whileInView={{
-                  y: [50, 0],
-                  opacity: [0, 1],
-                }}
-                transition={{
-                  duration: 0.5,
-                }}
+                {...slideInView()}
                 className="flex  items-center gap-2"
               >
                 <button

@@ -3,7 +3,8 @@ import img1 from "../src/anxiety.jpg";
 import img2 from "../src/trauma.jpg";
 import img3 from "../src/burnout.jpg";
 import Image from "next/image";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
+import { slideInView } from "../Animation/animation";
 const Specialties = () => {
   const obj = [
     {
@@ -23,33 +24,33 @@ const Specialties = () => {
     },
   ];
   return (
-    <div className="sm:pt-28  sm:p-20 p-10 flex flex-col sm:gap-20 gap-10 items-center justify-around font-mont">
-      <motion.h1 whileInView={{
-        y:[10,0],
-        opacity:[0,1],
-      }}
-      transition={{
-        duration:1,
-      }} 
-      className="sm:text-6xl text-4xl font-semibold">My Specialites</motion.h1>
+    <div className="sm:pt-28  sm:p-20 p-10 flex flex-col sm:gap-20 gap-10 items-center justify-around font-mont overflow-hidden">
+      <motion.h1
+        {...slideInView()}
+        className="sm:text-6xl text-4xl font-semibold"
+      >
+        My Specialites
+      </motion.h1>
       <div className="flex gap-7 sm:flex-row flex-col justify-around items-center w-screen sm:px-18 px-5">
         {obj.map((data, i) => (
-          <div key={i} className="flex flex-col gap-7 bg-accent p-5 border py-10">
-            <motion.h2 whileInView={{
-                y:[20,0]
-            }}
-            transition={{
-                duration:0.5,
-            }} className=" text-xl font-semibold">{data.head}</motion.h2>
+          <div
+            key={i}
+            className="flex flex-col gap-7 bg-accent p-5 border border-primary py-10"
+          >
+            <motion.h2 {...slideInView()} className=" text-xl font-semibold">
+              {data.head}
+            </motion.h2>
             <p className="text-sm">{data.para}</p>
-            <motion.div whileInView={{
-                y:[80,0],
-                opacity:[0,1],
-            }}
-            transition={{
-                duration:0.5,
-            }} className="flex justify-center items-center"><Image className="sm:h-72 sm:w-72 h-60 w-60 rounded-full object-cover" src={data.img} alt="" /></motion.div>
-            
+            <motion.div
+              {...slideInView()}
+              className="flex justify-center items-center"
+            >
+              <Image
+                className="sm:h-72 sm:w-72 h-60 w-60 rounded-full object-cover"
+                src={data.img}
+                alt=""
+              />
+            </motion.div>
           </div>
         ))}
       </div>

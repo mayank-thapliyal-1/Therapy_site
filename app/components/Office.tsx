@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import pic from "../src/office1.jpeg";
 import pic2 from "../src/office2.jpeg";
 import Image from "next/image";
+import { slideInView } from "../Animation/animation";
 const Office = () => {
   const obj = [
     {
@@ -19,17 +20,11 @@ const Office = () => {
     },
   ];
   return (
-    <div className="font-mont w-screen flex sm:flex-row flex-col-reverse sm:h-screen h-full items-center sm:p-10 p-5 bg-accent ">
+    <div className="font-mont w-screen flex sm:flex-row flex-col-reverse sm:h-screen h-full items-center sm:p-10 p-5 bg-accent overflow-hidden ">
       <div className="flex sm:gap-20 gap-10 flex-col  flex-1 sm:pt-20 sm:px-10 h-full ">
         <span className="flex flex-col gap-2">
           <motion.h1
-            whileInView={{
-              y: [40, 0],
-              opacity: [0, 1],
-            }}
-            transition={{
-              duration: 0.5,
-            }}
+            {...slideInView()}
             className="sm:text-7xl text-4xl font-semibold"
           >
             Our Office
@@ -40,13 +35,7 @@ const Office = () => {
         </span>
         <div className="flex flex-col sm:gap-14 gap-5">
           <motion.p
-            whileInView={{
-              y: [40, 0],
-              opacity: [0, 1],
-            }}
-            transition={{
-              duration: 0.5,
-            }}
+           {...slideInView()}
             className="sm:text-2xl text-md"
           >
             Located in Santa Monica, the office offers natural light,
@@ -57,14 +46,9 @@ const Office = () => {
           <div className="flex flex-col sm:gap-1 gap-2 ">
             {obj.map((data, i) => (
               <motion.span
-                whileInView={{
-                  y: [40, 0],
-                  opacity: [0, 1],
-                }}
-                transition={{
-                  duration: 0.5,
-                }}
-                key={i}
+                 key={i}
+                {...slideInView()}
+               
                 className="flex sm:gap-2  sm:text-xl text-md"
               >
                 <h2 className="font-semibold">{data.head}</h2>-
@@ -76,29 +60,17 @@ const Office = () => {
       </div>
       <div className="flex-1 flex flex-col items-center justify-center sm:p-6">
         <motion.div
-          whileInView={{
-            y: [80, 0],
-            opacity: [0, 1],
-          }}
-          transition={{
-            duration: 0.5,
-          }}
+           {...slideInView()}
         >
           {" "}
           <Image
-            className=" relative sm:top-38 top-20 sm:h-180 sm:w-130 h-100 w-60 rounded-t-full"
+            className=" relative sm:top-38 top-10 sm:h-180 sm:w-130 h-100 w-60 rounded-t-full"
             src={pic2}
             alt=""
           />
         </motion.div>
         <motion.div
-          whileInView={{
-            y: [80, 0],
-            opacity: [0, 1],
-          }}
-          transition={{
-            duration: 0.5,
-          }}
+           {...slideInView()}
         >
           {" "}
           <Image

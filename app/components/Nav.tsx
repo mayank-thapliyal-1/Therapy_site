@@ -1,6 +1,7 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { slideInView } from "../Animation/animation";
 const Nav = () => {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -15,7 +16,6 @@ const Nav = () => {
       } else {
         setShow(true);
       }
-
       setScrolled(currentY > 40);
       setLastScrollY(currentY);
     };
@@ -25,7 +25,6 @@ const Nav = () => {
    useEffect(() => {
     const checkSize = () => {
       setIsMobile(window.innerWidth < 768 ); 
-       console.log(ismobile)// tailwind md breakpoint
     };
 
     checkSize(); // run once on load
@@ -69,13 +68,7 @@ const Nav = () => {
           className={`${(active && ismobile) ? "flex" : "hidden"}  fixed  z-1 h-screen w-screen bg-background  text-2xl items-center justify-center`}
         >
           <motion.div
-            whileInView={{
-              y: [40, 0],
-              opacity: [0, 1],
-            }}
-            transition={{
-              duration: 0.5,
-            }}
+            {...slideInView()}
             className="flex  flex-col gap-4 items-center"
           >
             <a href="">Block</a>
