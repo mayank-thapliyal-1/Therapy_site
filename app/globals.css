@@ -19,9 +19,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F1E9E9;
-    --foreground: #15173D;
-    --accent: #f3b7df;
+  --background: #e3d2d2;
+  --foreground: #15173D;
+  --accent: #d6a8c6;
+  --primary: #a564a5;
     --font-mont: var(--font-montserrat);
   }
 }
@@ -29,5 +30,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-mont),sans-serif;
+  font-family: var(--font-mont), sans-serif;
 }

@@ -86,7 +86,7 @@ const Office = () => {
         >
           {" "}
           <Image
-            className=" relative top-20 sm:h-160 sm:w-120 h-100 w-60 rounded-t-full"
+            className=" relative sm:top-38 top-20 sm:h-180 sm:w-130 h-100 w-60 rounded-t-full"
             src={pic2}
             alt=""
           />
@@ -102,7 +102,7 @@ const Office = () => {
         >
           {" "}
           <Image
-            className="sm:h-70 sm:w-70 h-40 w-40 rounded-full relative bottom-20 sm:left-40 left-20 border border-foreground"
+            className="sm:h-80 sm:w-80 h-40 w-40 rounded-full relative sm:bottom-35 bottom-20 sm:left-42 left-20 border border-foreground"
             src={pic}
             alt=""
           />

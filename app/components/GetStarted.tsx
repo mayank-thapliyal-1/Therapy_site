@@ -44,7 +44,7 @@ const GetStarted = () => {
           transition={{
             duration: 0.5,
           }}
-          className="flex cursor-pointer gap-2 items-center uppercase border border-white sm:py-5 py-3 sm:px-10 px-5 "
+          className="flex cursor-pointer  gap-2 items-center uppercase border border-accent sm:py-5 py-3 sm:px-10 px-5 "
         >
           Get In Touch   <MdArrowRightAlt className="text-2xl" />
         </motion.button>

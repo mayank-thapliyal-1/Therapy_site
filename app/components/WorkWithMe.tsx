@@ -22,7 +22,7 @@ const WorkWithMe = () => {
     },
   ];
   return (
-    <div className="flex sm:flex-row flex-col overflow-hidden justify-around items-center sm:h-screen font-mont bg-primary text-accent h-full">
+    <div className="flex sm:flex-row text-accent flex-col overflow-hidden justify-around items-center sm:h-screen font-mont bg-primary  h-full">
       <motion.div
         whileInView={{
           y: [200, 0],
@@ -31,7 +31,7 @@ const WorkWithMe = () => {
         transition={{
           duration: 1,
         }}
-        className="flex-1 sm:h-screen h-80 object-contain overflow-hidden"
+        className="flex-1 sm:h-screen  h-80 object-contain overflow-hidden"
       >
         <Image className="object-cover sm:h-full h-100" src={Img} alt="" />
       </motion.div>

@@ -15,7 +15,7 @@ const Hero = () => {
           duration: 0.5,
         }}
       >
-        <Image className="rounded-t-full sm:h-screen h-60 w-40 sm:w-120 " src={pic} alt="" />
+        <Image className="rounded-t-full sm:h-screen h-60 w-40 sm:w-130 " src={pic} alt="" />
       </motion.div>
       <div className="flex flex-col gap-7 items-center justify-center">
         <motion.h1

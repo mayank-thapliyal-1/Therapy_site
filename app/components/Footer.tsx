@@ -12,7 +12,7 @@ const Footer = () => {
           transition={{
             duration: 0.5,
           }}
-          className="flex flex-col justify-around items-center sm:gap-5 gap-2"
+          className="flex flex-col justify-around sm:items-start items-center sm:gap-5 gap-2"
         >
           <h1 className="sm:text-5xl text-2xl font-semibold">Dr. Maya Reynolds</h1>
           <p className="sm:text-xl text-md">
@@ -32,7 +32,7 @@ const Footer = () => {
           transition={{
             duration: 0.5,
           }}
-          className="flex flex-col items-center justify-around sm:gap-5 gap-2"
+          className="flex flex-col sm:items-start items-center justify-around sm:gap-5 gap-2"
         >
           <h1 className="sm:text-3xl  text-2xl font-semibold">Home</h1>
           <p className="sm:text-xl">
@@ -57,7 +57,7 @@ const Footer = () => {
           </div>
         </motion.div>
       </div>
-      <div className="bg-accent flex flex-col justify-center items-center w-full py-20 gap-7">
+      <div className="bg-accent sm:text-lg flex flex-col  justify-center items-center w-full py-20 gap-7">
         <motion.div
           whileInView={{
             y: [40, 0],
