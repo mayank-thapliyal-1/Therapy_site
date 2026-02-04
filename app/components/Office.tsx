@@ -1,0 +1,115 @@
+"use client";
+import { motion } from "framer-motion";
+import pic from "../src/office1.jpeg";
+import pic2 from "../src/office2.jpeg";
+import Image from "next/image";
+const Office = () => {
+  const obj = [
+    {
+      head: "location",
+      info: "123th Street 45 W, Santa Monica, CA 90401",
+    },
+    {
+      head: "Sessions",
+      info: "In‑person + telehealth",
+    },
+    {
+      head: "Environment",
+      info: "Calm, private, grounding",
+    },
+  ];
+  return (
+    <div className="font-mont w-screen flex sm:flex-row flex-col-reverse sm:h-screen h-full items-center sm:p-10 p-5 bg-accent ">
+      <div className="flex sm:gap-20 gap-10 flex-col  flex-1 sm:pt-20 sm:px-10 h-full ">
+        <span className="flex flex-col gap-2">
+          <motion.h1
+            whileInView={{
+              y: [40, 0],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="sm:text-7xl text-4xl font-semibold"
+          >
+            Our Office
+          </motion.h1>
+          <h2 className="sm:text-xl text-sm">
+            A calm, private space designed to help you settle and feel grounded.
+          </h2>
+        </span>
+        <div className="flex flex-col sm:gap-14 gap-5">
+          <motion.p
+            whileInView={{
+              y: [40, 0],
+              opacity: [0, 1],
+            }}
+            transition={{
+              duration: 0.5,
+            }}
+            className="sm:text-2xl text-md"
+          >
+            Located in Santa Monica, the office offers natural light,
+            comfortable seating, and a quiet, uncluttered environment. Many
+            clients say the space itself helps them feel more at ease as they
+            arrive and begin their session.
+          </motion.p>
+          <div className="flex flex-col sm:gap-1 gap-2 ">
+            {obj.map((data, i) => (
+              <motion.span
+                whileInView={{
+                  y: [40, 0],
+                  opacity: [0, 1],
+                }}
+                transition={{
+                  duration: 0.5,
+                }}
+                key={i}
+                className="flex sm:gap-2  sm:text-xl text-md"
+              >
+                <h2 className="font-semibold">{data.head}</h2>-
+                <p>{data.info}</p>
+              </motion.span>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex-1 flex flex-col items-center justify-center sm:p-6">
+        <motion.div
+          whileInView={{
+            y: [80, 0],
+            opacity: [0, 1],
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+        >
+          {" "}
+          <Image
+            className=" relative top-20 sm:h-160 sm:w-120 h-100 w-60 rounded-t-full"
+            src={pic2}
+            alt=""
+          />
+        </motion.div>
+        <motion.div
+          whileInView={{
+            y: [80, 0],
+            opacity: [0, 1],
+          }}
+          transition={{
+            duration: 0.5,
+          }}
+        >
+          {" "}
+          <Image
+            className="sm:h-70 sm:w-70 h-40 w-40 rounded-full relative bottom-20 sm:left-40 left-20 border border-foreground"
+            src={pic}
+            alt=""
+          />
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default Office;
