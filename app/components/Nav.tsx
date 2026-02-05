@@ -59,7 +59,7 @@ const Nav = () => {
               Maya Reynolds
             </h1>
             <motion.div
-            {...slideInView()}
+            {...slideInView({y:20})}
              className=" sm:flex hidden gap-2 items-center text-xl underline">
               <button className="cursor-pointer">Blog</button>
               <button className="cursor-pointer">Contact</button>

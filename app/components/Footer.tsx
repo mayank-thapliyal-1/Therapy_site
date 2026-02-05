@@ -4,14 +4,14 @@ import { slideInView } from "../Animation/animation";
 const Footer = () => {
   return (
     <div className="flex flex-col w-screen font-mont">
-      <div className="flex sm:flex-row  w-full flex-col items-center  gap-5 justify-around sm:items-start py-20 sm:px-20">
+      <div className="flex sm:flex-row  w-full flex-col items-center  gap-5 justify-around sm:items-start py-20 sm:px-20 ">
         <motion.div
           {...slideInView()}
           className="flex flex-col w-full justify-around sm:items-start items-center sm:gap-5 gap-2"
         >
           <h1 className="sm:text-4xl text-2xl font-semibold ">Dr. Maya Reynolds</h1>
           <p className="sm:text-xl text-md">
-            123rd Street 45 W <br />
+            23rd Street 45 W <br />
             Santa Monica, CA
           </p>
           <div className="sm:text-xl text-md  underline cursor-pointer">

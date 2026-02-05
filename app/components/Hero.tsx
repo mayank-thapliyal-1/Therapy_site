@@ -6,17 +6,18 @@ import pic from "../src/Heropic.jpg";
 import { hoverStyle, slideInView } from "../Animation/animation";
 const Hero = () => {
   return (
-    <div className="font-mont flex sm:flex-row flex-col h-screen  pt-20 items-center justify-around w-screen overflow-hidden">
-      <div className="h-200 overflow-hidden">
-        <motion.div {...slideInView()}>
-          <Image
-            className="relative top-10 rounded-t-full sm:h-220 h-80 w-60 sm:w-130 "
-            src={pic}
-            alt=""
-          />
-        </motion.div>
-      </div>
-      <div className="flex flex-col gap-7 items-center justify-center">
+    <div className="font-mont mt-4  flex sm:flex-row flex-col h-full  sm:pt-19 pt-16 sm:gap-0 sm:p-0 p-5 gap-6 items-center justify-around w-screen overflow-hidden">
+      <motion.div
+        {...slideInView()}
+        className=" relative sm:h-180 sm:w-120 h-90 w-60 flex justify-center items-end overflow-hidden"
+      >
+        <Image
+          className="  rounded-t-full object-contain relative top-9 h-full w-full "
+          src={pic}
+          alt=""
+        />
+      </motion.div>
+      <div className="flex flex-col sm:gap-7 gap-7 items-center justify-center">
         <motion.h1
           {...slideInView()}
           className="sm:text-6xl text-2xl font-semibold "
