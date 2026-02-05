@@ -16,7 +16,7 @@ const Nav = () => {
       } else {
         setShow(true);
       }
-      setScrolled(currentY > 40);
+      setScrolled(currentY > 10);
       setLastScrollY(currentY);
     };
     window.addEventListener("scroll", handleScroll);
@@ -37,7 +37,7 @@ const Nav = () => {
       <div className="font-mont">
         {(show || active) && (
           <motion.nav
-            className={`fixed flex  items-center  justify-between px-6 py-3 top-0 left-0 w-full z-50 transition-all duration-300 bg-background
+            className={` fixed flex  items-center  justify-between px-6 py-3 top-0 left-0 w-full z-50 transition-all duration-300 bg-background
       }`}
           >
             <button
@@ -58,17 +58,19 @@ const Nav = () => {
             <h1 className="sm:text-4xl  text-2xl font-semibold">
               Maya Reynolds
             </h1>
-            <div className=" sm:flex hidden gap-2 items-center text-xl underline">
+            <motion.div
+            {...slideInView()}
+             className=" sm:flex hidden gap-2 items-center text-xl underline">
               <button className="cursor-pointer">Blog</button>
               <button className="cursor-pointer">Contact</button>
-            </div>
+            </motion.div>
           </motion.nav>
         )}
         <div
           className={`${(active && ismobile) ? "flex" : "hidden"}  fixed  z-1 h-screen w-screen bg-background  text-2xl items-center justify-center`}
         >
           <motion.div
-            {...slideInView()}
+            {...slideInView({once:false})}
             className="flex  flex-col gap-4 items-center"
           >
             <a href="">Block</a>

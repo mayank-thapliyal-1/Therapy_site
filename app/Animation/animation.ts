@@ -7,7 +7,7 @@ type InViewOptions = {
 }
 
 export const slideInView = ({
-  y = 150,
+  y = 80,
   x = 0,
   duration = 0.8,
   delay = 0,
