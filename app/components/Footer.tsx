@@ -4,7 +4,7 @@ import { slideInView } from "../Animation/animation";
 const Footer = () => {
   return (
     <div className="flex flex-col w-screen font-mont">
-      <div className="flex sm:flex-row  w-full flex-col items-center  gap-5 justify-around sm:items-start py-20 sm:px-20 overflow-hidden">
+      <div className="flex sm:flex-row  w-full flex-col items-center  gap-5 justify-around sm:items-start py-20 sm:px-20">
         <motion.div
           {...slideInView()}
           className="flex flex-col w-full justify-around sm:items-start items-center sm:gap-5 gap-2"
