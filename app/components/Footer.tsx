@@ -11,12 +11,12 @@ const Footer = () => {
         >
           <h1 className="sm:text-4xl text-2xl font-semibold ">Dr. Maya Reynolds</h1>
           <p className="sm:text-xl text-md">
-            23th Street 45 W <br />
+            123rd Street 45 W <br />
             Santa Monica, CA
           </p>
           <div className="sm:text-xl text-md  underline cursor-pointer">
-            Maya199@gmail.com <br />
-            (555) 567-854
+            dr.reynolds@mayareynoldspsyd.com<br />
+            (310) 555-7854
           </div>
         </motion.div>
         <motion.div
